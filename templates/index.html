@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+
+{% block headcontent %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="wrapper">
+        <form action="/search" class="search_box">
+            <!-- <input type="text" placeholder="what are you looking for?"> -->
+            <input name="city" type="text" placeholder="Type to Search...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+
+{% endblock %}

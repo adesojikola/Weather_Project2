@@ -1,0 +1,61 @@
+{% extends 'base.html' %} 
+
+{% block headcontent %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/weather.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <!-- <div class="container">
+        <br>
+        <h1>Weather at {{data.name}}:</h1>
+        <br>
+        <div class="c1" style="max-width: 600px;">
+            {% for k, v in data.items() %}
+            <div style="display: flex; justify-content: space-between;">
+                <h3>{{k}}:</h3>
+                <p>{{v}}</p>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+    <br>
+    <br> -->
+
+    <div class="main-display">
+        <div class="container-fluid px-1 px-md-4 py-5 mx-auto">
+            <div class="row d-flex justify-content-center px-3">
+                <div class="card">
+
+                    {% if data|length == 0 %}
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <center><h1>City not Found!!!</h1></center>
+                        <!-- <br> -->
+                    {% else %}
+                        <div class="d-flex">
+                            <img class="iconn" src="{{data.icon_url}}" alt="weather icon" style="filter: brightness(0) invert(1);">
+                            <p class="ms-auto mr-4 mt-3 mb-0 large-font">{{data.name}}</p>
+                        </div>
+                        <h1 class="ms-auto mr-4 med-font">{{data.temp}}&#176;C</h1>
+                        <p class="ms-auto mr-4 mb-0 med-font">{{data.description}}</p>
+                        <!-- <p class="time-font mb-0 ml-4 mt-auto">08:30 <span class="sm-font">AM</span></p> -->
+                        <p class="mb-0 ml-4 mt-auto sm-font"><i class="fa-solid fa-temperature-half"></i>  {{data.feels_like}}</p>
+                        <p class="mb-0 ml-4 mt-auto sm-font"><i class="fa-solid fa-droplet"></i>  {{data.humidity}}</p>
+                        <p class="mb-0 ml-4 mt-auto sm-font"><i class="fa-solid fa-wind"></i>  {{data.windspeed}}</p>
+                        <p class="mb-0 ml-4 mt-auto sm-font"><i class="fa-regular fa-sun"></i>   {{data.sunrise}}</p>
+                        <p class="mb-0 ml-4 mt-auto sm-font"><i class="fa-solid fa-sun"></i>   {{data.sunset}}</p>
+                        <!-- <br> -->
+                    {% endif %}
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

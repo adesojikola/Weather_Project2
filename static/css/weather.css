@@ -1,0 +1,73 @@
+body{
+    background: url('/static/wimg/test_default.jpg');
+    background-size: cover;
+    /* object-fit: cover; */
+}
+
+.main-display {
+    color: #fff;
+    overflow-x: hidden;
+    height: 85vh;
+    /* background-color: #CFD8DC; */
+    background-repeat: no-repeat;
+}
+
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.card {
+    /* background-image: url("https://www.maersk.com/~/media_sc9/maersk/news/press-releases/images/2022/02/moscow-maersk_1024x576.jpg?w=877&hash=FBB9B300B6D954A2ED18B560CD4AD146"); */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    /* background-size: cover; */
+    width: 600px;
+    height: 350px;
+    /* box-shadow: 0px 8px 16px 4px #9E9E9E; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+
+    color: #fff;
+}
+
+.time-font {
+    font-size: 50px;
+}
+
+.sm-font {
+    font-size: 18px;
+}
+
+.med-font {
+    font-size: 28px;
+}
+
+.large-font {
+    font-size: 60px;
+}
+
+.iconn{
+    display: inline-flex;
+    width: 15%;
+    mix-blend-mode: color-burn;
+    color: red;
+}
+
+/* .temp-icon{
+    display: inline-flex;
+    width: 10px;
+    /* mix-blend-mode: color-burn; */ /*
+}*/
